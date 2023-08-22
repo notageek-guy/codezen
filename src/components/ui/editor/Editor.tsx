@@ -7,6 +7,7 @@ import SidePanel from "./SidePanel";
 import CompileResult from "./CompileResult";
 import { useCallback } from "react";
 import { ViewUpdate } from "@codemirror/view";
+import SaveSnippet from "./SaveSnippet";
 
 function Editor() {
   const code = useEditorStore((state) => state.code);
@@ -25,7 +26,9 @@ function Editor() {
         <div className="border p-4 overflow-scroll col-span-3 relative">
           <div className="overlay rounded-md relative overflow-hidden w-full h-full shadow-4xl">
             <div className="mb-2 flex items-center justify-between">
-              <LangIcon className="text-2xl" />
+              <div className="flex items-center gap-x-2">
+                <LangIcon className="text-2xl" />
+              </div>
               <CompileResult />
             </div>
             <ReactCodeMirror
@@ -43,6 +46,7 @@ function Editor() {
               height="85vh"
               value={code}
             />
+            <SaveSnippet />
           </div>
         </div>
         <SidePanel />
