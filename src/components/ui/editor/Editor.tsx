@@ -37,6 +37,7 @@ function Editor() {
                 allowMultipleSelections: false,
                 indentOnInput: false,
               }}
+              
               theme={theme}
               extensions={selectedExtension}
               onChange={onChange}

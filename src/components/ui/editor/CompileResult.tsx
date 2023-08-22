@@ -81,7 +81,6 @@ function CompileResult() {
     try {
       const response = await axios.request(options);
       const statusId = response.data.status?.id;
-      console.log(response.data);
 
       if (statusId === 1 || statusId === 2) {
         setTimeout(() => {
