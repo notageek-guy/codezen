@@ -1,5 +1,5 @@
 import ReactCodeMirror from "@uiw/react-codemirror";
-
+import { vim } from "@replit/codemirror-vim";
 import { useEditorStore } from "@/store/store";
 import { extensions } from "@/lib/langs";
 import { icons } from "@/lib/icons";
@@ -37,9 +37,8 @@ function Editor() {
                 allowMultipleSelections: false,
                 indentOnInput: false,
               }}
-              
               theme={theme}
-              extensions={selectedExtension}
+              extensions={[selectedExtension, vim()]}
               onChange={onChange}
               height="85vh"
               value={code}

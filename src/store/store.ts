@@ -33,11 +33,13 @@ console.log(binarySearch(arr, target));
 
 interface ThemeStoreState {
   theme: typeof tokyoNight;
+  vimEnabled: boolean;
   code: string;
   setTheme: (newTheme: typeof tokyoNight) => void;
   lang: string;
   setLang: (language: string) => void;
   setCode: (code: string) => void;
+  toggleVim: () => void;
   customInput: string;
   setCustomInput: (input: string) => void;
   processing: boolean | null;
@@ -52,6 +54,7 @@ export const useEditorStore = create<ThemeStoreState>((set) => ({
   setTheme: (newTheme) => set({ theme: newTheme }),
   code: javascriptDefault,
   output: null,
+  toggleVim: () => set((state) => ({ vimEnabled: !state.vimEnabled })),
   setOuptut: (data) => set({ output: data }),
   toastMessage: "",
   setCode: (code) => set({ code: code }),
@@ -60,6 +63,7 @@ export const useEditorStore = create<ThemeStoreState>((set) => ({
   processing: null,
   setProcessing: (process) => set({ processing: process }),
   customInput: "",
+  vimEnabled: false,
   setCustomInput: (input) =>
     set({
       customInput: input,
