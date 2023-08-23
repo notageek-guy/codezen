@@ -1,4 +1,3 @@
-import React from "react";
 import { Settings as SettingIcon } from "lucide-react";
 import {
   Dialog,

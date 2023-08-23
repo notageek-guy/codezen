@@ -14,7 +14,7 @@ function Editor() {
   const theme = useEditorStore((state) => state.theme);
   const lang = useEditorStore((state) => state.lang);
   const setCode = useEditorStore((state) => state.setCode);
-  const onChange = useCallback((value: string, viewUpdate: ViewUpdate) => {
+  const onChange = useCallback((value: string, _: ViewUpdate) => {
     setCode(value);
   }, []);
   const selectedExtension = extensions[lang] || [];
