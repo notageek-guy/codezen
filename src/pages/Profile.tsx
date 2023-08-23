@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { auth, db } from "@/firebase/firebaseConfig";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Trash } from "lucide-react";

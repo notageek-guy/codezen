@@ -1,4 +1,3 @@
-import React from "react";
 import axios, { AxiosError, AxiosRequestConfig } from "axios";
 import { Button } from "../button";
 import { useEditorStore } from "@/store/store";

@@ -1,5 +1,4 @@
 import { useEditorStore } from "@/store/store";
-import React from "react";
 
 function InputBox() {
   const inputText = useEditorStore((state) => state.customInput);

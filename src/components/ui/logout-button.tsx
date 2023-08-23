@@ -1,5 +1,4 @@
 import { LogOut } from "lucide-react";
-import React from "react";
 import { Button } from "./button";
 import { signOut } from "firebase/auth";
 import { auth } from "@/firebase/firebaseConfig";

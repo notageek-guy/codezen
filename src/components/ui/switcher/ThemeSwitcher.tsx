@@ -1,4 +1,3 @@
-import React from "react";
 import { topThemes } from "../../../lib/theme";
 import {
   Select,

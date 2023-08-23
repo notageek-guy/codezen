@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import{ useCallback, useState } from "react";
 import { Button } from "../button";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "@/firebase/firebaseConfig";

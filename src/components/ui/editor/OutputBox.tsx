@@ -1,14 +1,6 @@
-import React from "react";
 import { useEditorStore } from "@/store/store";
 
-interface OutputDetails {
-  status?: {
-    id?: number;
-  };
-  compile_output?: string;
-  stdout?: string;
-  stderr?: string;
-}
+
 
 function OutputBox() {
   const output = useEditorStore((state) => state.output);

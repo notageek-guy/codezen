@@ -1,5 +1,4 @@
 import { useEditorStore } from "@/store/store";
-import React from "react";
 
 function ResultBox() {
   const outputDetails = useEditorStore((state) => state.output);

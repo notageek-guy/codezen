@@ -1,4 +1,3 @@
-import React from "react";
 import { languageOptions } from "@/constants/langs";
 import {
   Select,
